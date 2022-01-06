@@ -1,0 +1,61 @@
+﻿    
+    /// <summary>
+    /// @Raw(Model.intro)
+    /// @(Model.baseUrl)#@(Model.link)
+    /// </summary>
+    @foreach (var p in @Model.pds)
+    { 
+    <text>///</text><param name="@p.Name">@Raw(p.Description) @:</param>
+    }
+    public static @(Model.rt) @(Model.funName)(@Raw(Model.pps))
+    {
+        var client = Iotsys.Ezviz.Ys7Client.GetClient(false);
+        var request = new RestRequest(Method.POST);
+        request.Resource = "@Model.api";
+
+        request.AddQueryParameter("accessToken", Iotsys.Ezviz.Ys7Client.TokenData.AccessToken);
+        @foreach (var p in @Model.pds)
+        {
+            string ts = "";
+            if(p.Type != "string")
+            {
+                 ts = ".ToString()";
+            }
+
+            if (p.Required)
+            {
+        <text>request.AddQueryParameter("@p.Name", @(p.Name)@(ts));</text>
+            }
+            else
+            {
+                if (p.Type == "string")
+                {
+        <text>if (@(p.Name) != "")</text>  
+            <text>request.AddQueryParameter("@p.Name", @p.Name);</text>
+                }
+                else
+                {
+        <text>if (@(p.Name).HasValue)</text>  
+            <text>request.AddQueryParameter("@(p.Name)", @(p.Name).Value@(ts));</text>
+                }        
+            }
+        }
+
+        var tryTimes = 0;
+
+        while (tryTimes++ < 3)
+        {
+            var response = client.Execute(request);
+            var result = JsonConvert.DeserializeObject<@(Model.rt)>(response.Content);
+
+            if (result.Code == "10002")
+            {
+                Iotsys.Ezviz.Ys7Client.UpdateAccessToken();
+                continue;
+            }
+
+            return result;
+        }
+
+        return null;
+    }

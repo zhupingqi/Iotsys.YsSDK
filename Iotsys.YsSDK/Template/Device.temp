@@ -1,0 +1,15 @@
+﻿using Newtonsoft.Json;
+using RestSharp;
+using System;
+
+namespace Iotsys.Ezviz
+{
+    public class Device
+    {
+        @foreach (var p in @Model.apiCode)
+        {
+
+   <text>@Raw(p)</text>
+        }
+    }
+}

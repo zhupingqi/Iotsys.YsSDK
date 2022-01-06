@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iotsys.YsSDK", "Iotsys.YsSDK\Iotsys.YsSDK.csproj", "{39C6B47F-2860-48AD-B56C-532BE4F7BFC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iotsys.Ezviz", "Iotsys.Ezviz\Iotsys.Ezviz.csproj", "{BA2DA9F1-E0C6-42EA-8647-C5DAB781AEA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39C6B47F-2860-48AD-B56C-532BE4F7BFC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39C6B47F-2860-48AD-B56C-532BE4F7BFC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39C6B47F-2860-48AD-B56C-532BE4F7BFC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39C6B47F-2860-48AD-B56C-532BE4F7BFC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA2DA9F1-E0C6-42EA-8647-C5DAB781AEA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA2DA9F1-E0C6-42EA-8647-C5DAB781AEA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA2DA9F1-E0C6-42EA-8647-C5DAB781AEA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA2DA9F1-E0C6-42EA-8647-C5DAB781AEA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA6D77CA-A0AF-46E8-BAE1-E3107BD0B992}
+	EndGlobalSection
+EndGlobal

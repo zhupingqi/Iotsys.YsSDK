@@ -1,0 +1,26 @@
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
+
+namespace Iotsys.Ezviz
+{
+    public class @(Model.funName)Data
+    {   @foreach (var p in @Model.rp)
+        {
+            <text>
+            /// <summary>
+            /// @p.Description
+            /// </summary>
+            [JsonProperty("@p.Name")]
+            public @Raw(p.Type) @p.Name.Substring(0,1).ToUpper()@p.Name.Substring(1) { get; set; }</text>
+        }        
+    }
+
+    public class @(Model.funName)Response : ResponseBase<@Raw(Model.dataType)>
+    {
+        @if(Model.pageToken != null)
+        {
+            <text>[JsonProperty("page")]
+            public ResponsePage Page { get; set; }</text>
+        }
+    }
+}

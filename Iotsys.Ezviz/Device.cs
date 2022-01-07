@@ -164,7 +164,7 @@ namespace Iotsys.Ezviz
         request.AddQueryParameter("ipcSerial", ipcSerial);
         if (channelNo.HasValue)  
             request.AddQueryParameter("channelNo", channelNo.Value.ToString());
-        if (validateCode != "")  
+        if (!string.IsNullOrEmpty(validateCode))  
             request.AddQueryParameter("validateCode", validateCode);
 
         var tryTimes = 0;
@@ -997,13 +997,13 @@ namespace Iotsys.Ezviz
         request.AddQueryParameter("deviceSerial", deviceSerial);
         if (channelNo.HasValue)  
             request.AddQueryParameter("channelNo", channelNo.Value.ToString());
-        if (startTime != "")  
+        if (!string.IsNullOrEmpty(startTime))  
             request.AddQueryParameter("startTime", startTime);
-        if (stopTime != "")  
+        if (!string.IsNullOrEmpty(stopTime))  
             request.AddQueryParameter("stopTime", stopTime);
-        if (period != "")  
+        if (!string.IsNullOrEmpty(period))  
             request.AddQueryParameter("period", period);
-        if (enable != "")  
+        if (!string.IsNullOrEmpty(enable))  
             request.AddQueryParameter("enable", enable);
 
         var tryTimes = 0;
@@ -1395,7 +1395,7 @@ namespace Iotsys.Ezviz
         request.AddQueryParameter("accessToken", Iotsys.Ezviz.Ys7Client.TokenData.AccessToken);
         request.AddQueryParameter("deviceSerial", deviceSerial);
         request.AddQueryParameter("enable", enable);
-        if (channelNo != "")  
+        if (!string.IsNullOrEmpty(channelNo))  
             request.AddQueryParameter("channelNo", channelNo);
 
         var tryTimes = 0;
@@ -1466,7 +1466,7 @@ namespace Iotsys.Ezviz
         request.AddQueryParameter("accessToken", Iotsys.Ezviz.Ys7Client.TokenData.AccessToken);
         request.AddQueryParameter("deviceSerial", deviceSerial);
         request.AddQueryParameter("osdName", osdName);
-        if (channelNo != "")  
+        if (!string.IsNullOrEmpty(channelNo))  
             request.AddQueryParameter("channelNo", channelNo);
 
         var tryTimes = 0;
@@ -1502,7 +1502,7 @@ namespace Iotsys.Ezviz
 
         request.AddQueryParameter("accessToken", Iotsys.Ezviz.Ys7Client.TokenData.AccessToken);
         request.AddQueryParameter("deviceSerial", deviceSerial);
-        if (type != "")  
+        if (!string.IsNullOrEmpty(type))  
             request.AddQueryParameter("type", type);
 
         var tryTimes = 0;
@@ -1541,9 +1541,9 @@ namespace Iotsys.Ezviz
         request.AddQueryParameter("accessToken", Iotsys.Ezviz.Ys7Client.TokenData.AccessToken);
         request.AddQueryParameter("deviceSerial", deviceSerial);
         request.AddQueryParameter("enable", enable);
-        if (channelNo != "")  
+        if (!string.IsNullOrEmpty(channelNo))  
             request.AddQueryParameter("channelNo", channelNo);
-        if (type != "")  
+        if (!string.IsNullOrEmpty(type))  
             request.AddQueryParameter("type", type);
 
         var tryTimes = 0;
@@ -2514,7 +2514,7 @@ namespace Iotsys.Ezviz
         request.AddQueryParameter("accessToken", Iotsys.Ezviz.Ys7Client.TokenData.AccessToken);
         request.AddQueryParameter("deviceSerial", deviceSerial);
         request.AddQueryParameter("enable", enable.ToString());
-        if (phone != "")  
+        if (!string.IsNullOrEmpty(phone))  
             request.AddQueryParameter("phone", phone);
         if (channelNo.HasValue)  
             request.AddQueryParameter("channelNo", channelNo.Value.ToString());
@@ -2712,7 +2712,7 @@ namespace Iotsys.Ezviz
 
         request.AddQueryParameter("accessToken", Iotsys.Ezviz.Ys7Client.TokenData.AccessToken);
         request.AddQueryParameter("deviceSerial", deviceSerial);
-        if (phone != "")  
+        if (!string.IsNullOrEmpty(phone))  
             request.AddQueryParameter("phone", phone);
         if (channelNo.HasValue)  
             request.AddQueryParameter("channelNo", channelNo.Value.ToString());
@@ -3472,9 +3472,9 @@ namespace Iotsys.Ezviz
         request.Resource = "ram/account/get";
 
         request.AddQueryParameter("accessToken", Iotsys.Ezviz.Ys7Client.TokenData.AccessToken);
-        if (accountId != "")  
+        if (!string.IsNullOrEmpty(accountId))  
             request.AddQueryParameter("accountId", accountId);
-        if (accountName != "")  
+        if (!string.IsNullOrEmpty(accountName))  
             request.AddQueryParameter("accountName", accountName);
 
         var tryTimes = 0;
@@ -4008,7 +4008,7 @@ namespace Iotsys.Ezviz
         request.AddQueryParameter("accessToken", Iotsys.Ezviz.Ys7Client.TokenData.AccessToken);
         request.AddQueryParameter("dataType", dataType.ToString());
         request.AddQueryParameter("image", image);
-        if (operation != "")  
+        if (!string.IsNullOrEmpty(operation))  
             request.AddQueryParameter("operation", operation);
 
         var tryTimes = 0;
@@ -4374,7 +4374,7 @@ namespace Iotsys.Ezviz
         request.AddQueryParameter("deviceSerial", deviceSerial);
         if (channelNo.HasValue)  
             request.AddQueryParameter("channelNo", channelNo.Value.ToString());
-        if (code != "")  
+        if (!string.IsNullOrEmpty(code))  
             request.AddQueryParameter("code", code);
         if (expireTime.HasValue)  
             request.AddQueryParameter("expireTime", expireTime.Value.ToString());
@@ -4382,15 +4382,15 @@ namespace Iotsys.Ezviz
             request.AddQueryParameter("protocol", protocol.Value.ToString());
         if (quality.HasValue)  
             request.AddQueryParameter("quality", quality.Value.ToString());
-        if (startTime != "")  
+        if (!string.IsNullOrEmpty(startTime))  
             request.AddQueryParameter("startTime", startTime);
-        if (stopTime != "")  
+        if (!string.IsNullOrEmpty(stopTime))  
             request.AddQueryParameter("stopTime", stopTime);
-        if (type != "")  
+        if (!string.IsNullOrEmpty(type))  
             request.AddQueryParameter("type", type);
         if (supportH265.HasValue)  
             request.AddQueryParameter("supportH265", supportH265.Value.ToString());
-        if (gbchannel != "")  
+        if (!string.IsNullOrEmpty(gbchannel))  
             request.AddQueryParameter("gbchannel", gbchannel);
 
         var tryTimes = 0;

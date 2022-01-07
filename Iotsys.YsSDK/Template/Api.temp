@@ -30,7 +30,7 @@
             {
                 if (p.Type == "string")
                 {
-        <text>if (@(p.Name) != "")</text>  
+        <text>if (!string.IsNullOrEmpty(@(p.Name)))</text>  
             <text>request.AddQueryParameter("@p.Name", @p.Name);</text>
                 }
                 else

@@ -1,4 +1,4 @@
-萤石开发平台 .net sdk
+萤石开放平台 .net sdk
 https://open.ys7.com/help/19
 
 1. 根据需求使用 Iotsys.YsSDK 重新生成类库(也可以不重新生成)
